@@ -3,6 +3,7 @@ dependencies:
   '@angular/common': 8.2.14_@angular+core@8.2.14+rxjs@6.5.4
   '@angular/compiler': 8.2.14
   '@angular/core': 8.2.14_rxjs@6.5.4+zone.js@0.10.2
+  '@angular/elements': 9.1.0_496fbbced1b992a41284b3329ac40a55
   '@angular/forms': 8.2.14_e9fbe5720e9434eb9ae0f6720f1ca3f4
   '@angular/platform-browser': 8.2.14_ecb0ad61817e3ede6ce462931a5e5041
   '@angular/platform-browser-dynamic': 8.2.14_4c5c48e73106d2e9b7131da2a9d6eb8e
@@ -29,11 +30,13 @@ devDependencies:
   '@angular/language-service': 8.2.14
   '@ngtools/webpack': 8.3.23_30ee6c1b5aea7c928f5e31ff3170fb95
   '@types/node': 13.1.7
+  '@webcomponents/custom-elements': 1.4.1
   codelyzer: 5.2.1_55334123669ad0f700698d110d208e46
   http-server: 0.12.1
   postcss-loader: 3.0.0
   pre-commit: 1.2.2
   safe-buffer: 5.2.0
+  terser: 4.6.10
   ts-loader: 6.2.1_typescript@3.5.3
   tslib: 1.10.0
   tslint: 5.20.1_typescript@3.5.3
@@ -307,6 +310,20 @@ packages:
       zone.js: ~0.9.1
     resolution:
       integrity: sha512-zeePkigi+hPh3rN7yoNENG/YUBUsIvUXdxx+AZq+QPaFeKEA2FBSrKn36ojHFrdJUjKzl0lPMEiGC2b6a6bo6g==
+  /@angular/elements/9.1.0_496fbbced1b992a41284b3329ac40a55:
+    dependencies:
+      '@angular/core': 8.2.14_rxjs@6.5.4+zone.js@0.10.2
+      '@angular/platform-browser': 8.2.14_ecb0ad61817e3ede6ce462931a5e5041
+      rxjs: 6.5.4
+      tslib: 1.10.0
+    dev: false
+    peerDependencies:
+      '@angular/core': 9.1.0
+      '@angular/platform-browser': 9.1.0
+      rxjs: ^6.5.3
+      tslib: ^1.10.0
+    resolution:
+      integrity: sha512-jvMkhKP+8WOn6LWsEzCWaWVAB5HOKq9Hi6VDe6Z2DKR738ZFitG6wYh/w43EQOA9PnGh4f/HjEICS75qp8HQOg==
   /@angular/forms/8.2.14_e9fbe5720e9434eb9ae0f6720f1ca3f4:
     dependencies:
       '@angular/common': 8.2.14_@angular+core@8.2.14+rxjs@6.5.4
@@ -1389,6 +1406,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-w0U0pD4EhlnvRyeJzBqaVSJAo9w/ce7/WPogeXLzGkO6hzhr4GnQIZ4W4uUt5b9ooAaXPtnXlj0gzsXEOUNYMg==
+  /@webcomponents/custom-elements/1.4.1:
+    dev: true
+    resolution:
+      integrity: sha512-vNCS1+3sxJOpoIsBjUQiXjGLngakEAGOD5Ale+6ikg6OZG5qI5O39frm3raPhud/IwnF4vec5ags05YBsgzcuA==
   /@xtuc/ieee754/1.2.0:
     dev: true
     resolution:
@@ -6983,6 +7004,17 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-0ikKraVtRDKGzHrzkCv5rUNDzqlhmhowOBqC0XqUHFpW+vJ45+20/IFBcebwKfiS2Z9fJin6Eo+F1zLZsxi8RA==
+  /terser/4.6.10:
+    dependencies:
+      commander: 2.20.3
+      source-map: 0.6.1
+      source-map-support: 0.5.16
+    dev: true
+    engines:
+      node: '>=6.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-qbF/3UOo11Hggsbsqm2hPa6+L4w7bkr+09FNseEe8xrcVD3APGLFqE+Oz1ZKAxjYnFsj80rLOfgAtJ0LNJjtTA==
   /through/2.3.8:
     dev: true
     resolution:
@@ -7782,6 +7814,7 @@ specifiers:
   '@angular/compiler': 8.2.14
   '@angular/compiler-cli': ^8.2.14
   '@angular/core': 8.2.14
+  '@angular/elements': ^9.1.0
   '@angular/forms': 8.2.14
   '@angular/language-service': 8.2.14
   '@angular/platform-browser': 8.2.14
@@ -7793,6 +7826,7 @@ specifiers:
   '@nguniversal/express-engine': ^8.2.6
   '@nguniversal/module-map-ngfactory-loader': ^8.2.6
   '@types/node': ^13.1.7
+  '@webcomponents/custom-elements': ^1.4.1
   codelyzer: ^5.2.1
   core-js: 2.4.1
   devextreme: '19.2'
@@ -7807,6 +7841,7 @@ specifiers:
   rxjs: 6.5.4
   safe-buffer: ^5.2.0
   stream: ^0.0.2
+  terser: ^4.6.10
   ts-loader: ^6.2.1
   tslib: ^1.10.0
   tslint: ^5.20.1

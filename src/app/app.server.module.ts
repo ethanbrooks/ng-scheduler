@@ -4,7 +4,7 @@ import {ModuleMapLoaderModule} from '@nguniversal/module-map-ngfactory-loader';
 
 
 import {AppModule} from './app.module';
-import {PivotApiComponent} from './schedulerapi.component';
+import {SchedulerApiComponent} from './schedulerapi.component';
 
 @NgModule({
   imports: [
@@ -13,12 +13,10 @@ import {PivotApiComponent} from './schedulerapi.component';
     AppModule,
     ServerModule,
     ModuleMapLoaderModule,
-    ServerTransferStateModule,
-
-
+    ServerTransferStateModule
   ],
   // Since the bootstrapped component is not inherited from your
   // imported AppModule, it needs to be repeated here.
-  bootstrap: [PivotApiComponent],
+  bootstrap: [SchedulerApiComponent],
 })
 export class AppServerModule {}
